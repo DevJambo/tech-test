@@ -4,7 +4,7 @@ import Search from './search'
 import SearchResults from './SearchResults.js';
 
 const App = () => {
-  const [searchResults, setSearchResults] = useState();
+  const [searchResults, setSearchResults] = useState([]);
 
   return (
     <div className="app">
@@ -14,7 +14,7 @@ const App = () => {
        alt='nasaLogo'
        />
        <Search setSearchResults={setSearchResults} />
-       <SearchResults />
+       <SearchResults results={searchResults}/>
     </div>
   );
 }

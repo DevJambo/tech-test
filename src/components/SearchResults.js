@@ -1,9 +1,12 @@
 import React from "react";
 import "../styles/SearchResults.css"
 
-const SearchResults = () => {
-
-    return (
+const SearchResults = ({ results }) => {
+  console.log(results)
+if (!results.length) {
+  return <p>No results</p>;
+} else {
+return (
         <div className="image-box">
           <p>Search Results</p>
           <img
@@ -13,6 +16,6 @@ const SearchResults = () => {
           />
         </div>
     );
+  };
 };
-
 export default SearchResults;
