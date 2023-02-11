@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import '../styles/search.css'
 import getImages from "../requests/getImages";
+import PropTypes from "prop-types"
 
 const Search = ({ setSearchResults }) => {
+  console.log(setSearchResults)
     const [value, setValue] = useState();
 
     const handleSubmit = async (event) => {
@@ -27,3 +29,7 @@ const Search = ({ setSearchResults }) => {
 };
 
 export default Search;
+
+Search.propTypes = {
+  setSearchResults: PropTypes.func.isRequired,
+};
